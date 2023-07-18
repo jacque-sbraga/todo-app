@@ -1,5 +1,77 @@
-body {
-  background: red;
+:root {
+  font-size: 0.625rem;
+}
+
+* {
+  font-family: "Josefin Sans";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: none;
+}
+
+.container {
+  max-width: 1440px;
+  background-image: url("../assets/bg-desktop-light.jpg");
+  background-position: top/center;
+  background-repeat: no-repeat;
+  background-color: hsl(236, 33%, 92%);
+  height: 30rem;
+  padding: 2rem;
+}
+.container header {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-top: 7.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container header h1 {
+  text-transform: uppercase;
+  letter-spacing: 1.6rem;
+  font-size: 3.2rem;
+  color: hsl(0, 0%, 98%);
+}
+.container header img {
+  width: 3rem;
+  cursor: pointer;
+}
+
+.todo {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-top: 4.8rem;
+}
+.todo form {
+  position: relative;
+}
+.todo form::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid hsl(236, 33%, 92%);
+  top: 10px;
+  left: 16px;
+}
+.todo-input {
+  display: block;
+  width: 100%;
+  padding: 1.6rem 1.6rem 1.6rem 5.2rem;
+  border-radius: 2px;
+}
+.todo-input::placeholder {
+  color: hsl(234, 11%, 52%);
 }
 
 /*# sourceMappingURL=styles.css.map */
