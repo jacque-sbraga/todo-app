@@ -8,8 +8,8 @@
     font-family: 'Josefin Sans'
     padding: 0
     margin: 0
-    box-sizing: border-box
-    
+    box-sizing: border-box   
+    font-size: 1.6rem 
 
 ul 
     list-style: none
@@ -42,28 +42,74 @@ input
             cursor: pointer
             
 .todo 
-    @include mixins.container(320px)
+    @include mixins.container(540px)
     margin: 0 auto
     padding-top: 4.8rem
     form
         position: relative
+        
         &::before
-            content: ""
-            display: block
-            width: 20px
-            height: 20px
-            position: absolute
-            border-radius: 50%
-            border: 2px solid variables.$very-light-grayish-blue
-            top: 10px
-            left: 16px
+            @include mixins.checkbox()
     &-input
         display: block
         width: 100%
         padding: 1.6rem 1.6rem 1.6rem 5.2rem
-        border-radius: 2px
+        border-radius: 4px
+        transition: .1s ease-in
+        border: 2px solid transparent
+        background: variables.$very-light-gray
+        
+        &:focus
+            box-shadow: 0 0 0 0
+            outline: 0
+            border-color: variables.$dark-grayish-blue
+
         &::placeholder
             color: variables.$dark-grayish-blue
         
-            
-            
+.todo-list
+    background: variables.$very-light-gray
+    border-radius: 4px
+    margin-top: 2.4rem
+    box-shadow: 1px 2px 5px rgba(0,0,0, .1)
+
+.todo-task
+    padding: 2rem
+    border-bottom: 1px solid variables.$light-grayish-blue
+    @include mixins.flex()
+    justify-content: space-between
+    color: variables.$very-dark-grayish-blue
+
+    div
+        @include mixins.flex()
+        gap: 1.4rem
+
+        label
+            position: relative
+            padding-left: 30px
+            cursor: pointer
+            &::before
+                @include mixins.checkbox()
+                
+
+.todo-options
+    @include mixins.flex()
+    padding: 1.6rem
+    justify-content: space-between
+    span
+        font-size: 1.2rem
+        cursor: pointer
+        transition: color .2s
+    .todo-status
+        @include mixins.flex()
+        gap: 1rem
+        font-weight: 700
+        span:hover
+            color: variables.$bright-blue
+
+.checkbox
+    position: absolute
+    opacity: 0        
+
+     
+

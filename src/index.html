@@ -21,16 +21,26 @@
           <input type="text" placeholder="Create a new todo..." class="todo-input">
         </form>
       </div>
-      <div>
+      <div class="todo-list">
         <ul>
-          <li>
-            <input type="checkbox"> <p>Complete online Javascript course</p>
+          <li class="todo-task">
+            <div>
+              <input type="checkbox" id="checkboxMark" class="checkbox">
+              <label for="checkboxMark"></label> <p>Complete online Javascript course</p>
+            </div>
+            <img src="assets/icon-cross.svg">
+          </li>
+          <li class="todo-task">
+            <div>
+              <input type="checkbox" id="checkboxMark" class="checkbox">
+              <label for="checkboxMark"></label> <p>Limpar casa</p>
+            </div>
             <img src="assets/icon-cross.svg">
           </li>
         </ul>
-        <div>
-          <span>items left</span>
-          <div><span>All</span> <span>Active</span><span>Completed</span></div>
+        <div class="todo-options">
+          <span>5 items left</span>
+          <div class="todo-status"><span>All</span> <span>Active</span><span>Completed</span></div>
           <span>Clear Completed</span>
         </div>
       </div>

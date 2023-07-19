@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 1.6rem;
 }
 
 ul {
@@ -46,7 +47,7 @@ input {
 }
 
 .todo {
-  max-width: 320px;
+  max-width: 540px;
   margin: 0 auto;
   padding-top: 4.8rem;
 }
@@ -61,17 +62,88 @@ input {
   position: absolute;
   border-radius: 50%;
   border: 2px solid hsl(236, 33%, 92%);
-  top: 10px;
-  left: 16px;
+  top: 12px;
+  left: 13px;
 }
 .todo-input {
   display: block;
   width: 100%;
   padding: 1.6rem 1.6rem 1.6rem 5.2rem;
-  border-radius: 2px;
+  border-radius: 4px;
+  transition: 0.1s ease-in;
+  border: 2px solid transparent;
+  background: hsl(0, 0%, 98%);
+}
+.todo-input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border-color: hsl(234, 11%, 52%);
 }
 .todo-input::placeholder {
   color: hsl(234, 11%, 52%);
+}
+
+.todo-list {
+  background: hsl(0, 0%, 98%);
+  border-radius: 4px;
+  margin-top: 2.4rem;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-task {
+  padding: 2rem;
+  border-bottom: 1px solid hsl(234, 39%, 85%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(237, 14%, 26%);
+}
+.todo-task div {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+.todo-task div label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.todo-task div label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid hsl(236, 33%, 92%);
+  top: 12px;
+  left: 13px;
+}
+
+.todo-options {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem;
+  justify-content: space-between;
+}
+.todo-options span {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.todo-options .todo-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+.todo-options .todo-status span:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
